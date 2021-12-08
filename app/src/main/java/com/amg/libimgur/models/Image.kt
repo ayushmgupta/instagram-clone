@@ -1,0 +1,102 @@
+package com.amg.libimgur.models
+
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
+data class Image(
+    @Json(name = "account_id")
+    val accountId: Int?,
+    @Json(name = "account_url")
+    val account_url: String?,
+    @Json(name = "ad_config")
+    val adConfig: AdConfig?,
+    @Json(name = "ad_type")
+    val adType: Int?,
+    @Json(name = "ad_url")
+    val adUrl: String?,
+    @Json(name = "animated")
+    val animated: Boolean?,
+    @Json(name = "bandwidth")
+    val bandwidth: Long?,
+    @Json(name = "comment_count")
+    val comment_count: Int?,
+    @Json(name = "cover")
+    val cover: String?,
+    @Json(name = "cover_height")
+    val coverHeight: Int?,
+    @Json(name = "cover_width")
+    val coverWidth: Int?,
+    @Json(name = "datetime")
+    val datetime: Int?,
+    @Json(name = "description")
+    val description: Any?,
+    @Json(name = "downs")
+    val downs: Int?,
+    @Json(name = "edited")
+    val edited: Int?,
+    @Json(name = "favorite")
+    val favorite: Boolean?,
+    @Json(name = "favorite_count")
+    val favorite_count: Int?,
+    @Json(name = "has_sound")
+    val hasSound: Boolean?,
+    @Json(name = "height")
+    val height: Int?,
+    @Json(name = "id")
+    val id: String?,
+    @Json(name = "images")
+    val images: List<Image>?,
+    @Json(name = "images_count")
+    val images_count: Int?,
+    @Json(name = "in_gallery")
+    val inGallery: Boolean?,
+    @Json(name = "in_most_viral")
+    val inMostViral: Boolean?,
+    @Json(name = "include_album_ads")
+    val includeAlbumAds: Boolean?,
+    @Json(name = "is_ad")
+    val isAd: Boolean?,
+    @Json(name = "is_album")
+    val is_album: Boolean?,
+    @Json(name = "layout")
+    val layout: String?,
+    @Json(name = "link")
+    val link: String?,
+    @Json(name = "nsfw")
+    val nsfw: Boolean?,
+    @Json(name = "points")
+    val points: Int?,
+    @Json(name = "privacy")
+    val privacy: String?,
+    @Json(name = "score")
+    val score: Int?,
+    @Json(name = "section")
+    val section: String?,
+    @Json(name = "size")
+    val size: Int?,
+    @Json(name = "tags")
+    val tags: List<Tag>?,
+    @Json(name = "title")
+    val title: String?,
+    @Json(name = "topic")
+    val topic: Any?,
+    @Json(name = "topic_id")
+    val topicId: Any?,
+    @Json(name = "type")
+    val type: String?,
+    @Json(name = "ups")
+    val ups: Int?,
+    @Json(name = "views")
+    val views: Int?,
+    @Json(name = "vote")
+    val vote: Any?,
+    @Json(name = "width")
+    val width: Int?
+) {
+    @JsonClass(generateAdapter = true)
+    data class Processing(
+        @Json(name = "status")
+        val status: String?
+    )
+}
